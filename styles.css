@@ -1,0 +1,469 @@
+/* Reset default margins and paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;  /* Add this line */
+  scroll-behavior: smooth;
+}
+
+/* Ensure the main container takes the full viewport height */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure each section takes up the full viewport height */
+section {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+
+main {
+  width: 100%;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  background-color: #fff; /* White background */
+  padding: 20px;
+  position: relative; /* Allow absolute positioning within */
+  width: 100%;
+  max-width: 100%; /* Use the full width of the container */
+  margin: 20px 0; /* Add space around the intro section */
+  margin-top: 100px;
+}
+
+
+
+
+.center-image {
+  max-width: 20%; /* Reduce the max-width to make the image smaller */
+  position: relative;
+  right: 30px;
+  z-index: 3; /* Ensure the image is above the background */
+}
+
+.intro-text {
+  margin-top: -132px;
+  text-align: left;
+  position: relative;
+  z-index: 2; /* Ensure text is above the background */
+}
+
+.intro-text h1 {
+  font-size: 2.5em;
+  font-weight: 200; /* Make the "Hi, i am" text lighter */
+  color: #000; /* Lighter color for the "Hi, i am" text */
+  text-transform: capitalize; /* Capitalize first letter of each word */
+  margin-bottom: 10px; /* Add space below the heading */
+  line-height: 1.2; /* Adjust line height for readability */
+  position: relative; /* Ensure proper stacking context */
+  z-index: 2; /* Ensure h1 text is above the background */
+}
+
+.intro-text h1 .name {
+  font-weight: bold; /* Make "NWOKORO CHIGOZIRIM" bold */
+  color: #000; /* Black color for "NWOKORO CHIGOZIRIM" */
+}
+
+
+
+.intro-text .developer-title-container {
+  position: absolute;
+  width: 100%; /* Ensure it spans the full width */
+  right: -160px;
+  transform: translateX(440px); /* Adjust to move more to the right */
+  margin-top: 12px;
+  z-index:0 ; /* Ensure it doesn't cover the image or text */
+  padding: 10px 0;
+  box-sizing: border-box;
+  width: calc(100% + 300px); /* Extend the width */
+  overflow: visible; /* Ensure it does not clip the text */
+  left: -200px;
+  top: 120px ;
+}
+
+.intro-text .developer-title {
+  font-size: 1.6em;
+  margin: 0; /* Remove default margin */
+  background-color: aqua;
+  color: #000; /* White text */
+  padding: 5px 20px; /* Add some padding for readability */
+  position: relative;
+  display: inline-block; /* Make it inline-block to work with ::before */
+  z-index: 2; /* Ensure text is above the pseudo-element */
+}
+
+.intro-text .developer-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -550px; /* Extend further to the left */
+  height: 100%;
+  width: 550px; /* Match this value to the left position */
+  background-color: aqua;
+  z-index: 1; /* Place it behind the text */
+}
+
+
+
+
+#what-i-do {
+  background: url('nikita.jpg') no-repeat center center/cover; /* Set background image */
+  width: 100%; /* Make the section span the full width of the container */
+  min-height: 600px; /* Ensure the section is tall enough */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  color: #fff; /* Ensure text is white for readability over the background image */
+  text-align: center; /* Center text in the section */
+  padding: 60px 20px; /* Add padding to the section */
+  position: relative; /* Position relative for absolute button placement */
+  margin-bottom: 60px;
+}
+
+#what-i-do h2 {
+  font-size: 36px;
+  margin-bottom: 20px; /* Add space below the heading */
+  position: relative; /* Allow positioning of the underline */
+  color: #4fc3f7; /* Aquamarine color for the heading */
+}
+
+.underline {
+  width: 100px; /* Set the width of the underline */
+  height: 2px; /* Set the height of the underline */
+  background-color: #B2BEB5; /* White color for the underline */
+  margin: 0 auto 20px auto; /* Center the underline and add space below */
+  position: relative; /* Ensure proper stacking context */
+  top: -10px; /* Position the underline slightly below the heading */
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around; /* Distribute columns evenly */
+  flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
+}
+
+.column {
+  flex: 1; /* Ensure columns take equal space */
+  margin: 0 10px; /* Add margin between columns */
+  min-width: 200px; /* Ensure columns have a minimum width */
+}
+
+.column h3 {
+  font-size: 24px;
+  white-space: nowrap; /* Prevent line break */
+}
+
+.column p {
+  font-size: 16px;
+  color: #fff; /* White text for better readability */
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px; /* Adjust spacing between button and text */
+  position: relative; /* Ensure relative positioning */
+  top: 90px; /* Adjust vertical positioning */
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007BFF; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade for hover state */
+}
+
+
+#who-i-am {
+  background-color: #fff; /* White background */
+  padding: 20px 20px; /* Adjust padding as needed */
+}
+
+#who-i-am .container {
+  max-width: 800px; /* Adjust max-width to control content width */
+  margin: 0 auto; /* Center the container */
+  position: relative; /* Relative positioning for z-indexing */
+}
+
+#who-i-am h2 {
+  font-size: 36px;
+  text-align: left; /* Align text to the left */
+  margin-bottom: 10px; /* Add space below the title */
+  margin-top: 40px; /* Add margin to move down */
+}
+
+
+#who-i-am .description {
+  background-color: aqua; /* Darker blue background */
+  color: #000;
+  padding: 15px 40px;
+  margin-left: -25px;
+  display: inline-block;
+  position: relative;
+  margin-top: 5px; /* Move it down */
+  margin-bottom: 20px; /* Add bottom margin to create space */
+  font-size: 18px; 
+  width: calc(100% + -150px); /* Extend the width to pass through the image */
+  z-index: 0; /* Lower z-index to allow image to be on top */
+  text-indent: -12px; /* Indent the text to keep it in the same position */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  left: -20px; /* Slight left adjustment for overlap */
+}
+
+
+#who-i-am .intro-note {
+  margin-top: -10px;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: -30px; /* Remove the left margin */
+  max-width: 400px; /* Set a max-width to compress the text */
+  text-align: left; /* Ensure text is aligned to the left */
+}
+
+#who-i-am .intro-note p {
+  margin: 0; /* Remove default margin */
+}
+
+.side-image {
+  width: 200px; /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  margin-left: 600px; /* Add margin to the left of the image */
+  margin-top: -299px; /* Move the image up a bit */
+  align-self: flex-start; /* Align the image to the start */
+  z-index: 1; /* Ensure the image is on top */
+  position: relative;
+}
+
+/* My Work Section */
+#my-work {
+  background-color: #333; /* Background color for the My Work section */
+  padding: 40px 20px; /* Padding for the section */
+  text-align: center; /* Center align text */
+  color: #fff;
+  margin-top: 50px; /* Adjust this value for desired space */
+}
+
+#my-work h2 {
+  font-size: 36px; /* Font size for the My Work title */
+  margin-bottom: 10px; /* Margin below the title */
+  margin-top: 20px; /* Adjust top margin if needed */
+  text-decoration: none; /* Remove underline */
+}
+
+#my-work .work-intro {
+  font-size: 2em; /* Further increased font size */
+  font-weight: bold; /* Make the text bold */
+  color: aqua; /* Change text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  margin-bottom: 20px;
+}
+
+
+
+/* Work gallery styles */
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 0; /* Space between items */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Remove margin around gallery */
+  padding:0;
+  margin: 0 auto;
+}
+
+.work-gallery::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+.work-image-container {
+  width: 100%; /* Ensure full width of the grid cell */
+  height: 300px; /* Set height as needed */
+  margin: 0; /* Remove margin to avoid gaps */
+  padding: 0; /* Remove padding to avoid gaps */
+}
+
+.work-image-container .work-image {
+  visibility: visible; /* Should not be hidden */
+  display: block; /* Ensure it is not set to none */
+  z-index: 1; /* Ensure it is above other content if needed */
+}
+
+.work-image {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Ensure the image covers the set dimensions without distortion */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-image-container:hover .work-image {
+  transform: scale(1.1); /* Enlarge the image on hover */
+  box-shadow:  0 0 15px 5px rgba(144, 238, 144, 0.5); /* Light green glow */
+}
+
+/* New Section for Gmail */
+#contact {
+  margin-top: 0px;
+  background: #000;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+#contact h2 {
+  font-size: 1.5em; /* Adjust font size as needed */
+  color:aqua;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 15px; /* Space between icons */
+  margin-top: 20px; /* Add some space above the icons */
+}
+
+.social-icons a {
+  display: inline-block; /* Ensure the icons are inline-block elements */
+}
+
+
+
+.icon {
+  font-size: 24px; /* Adjust size as needed */
+  color: aqua; /* Icon color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.icon:hover {
+  opacity: 0.7; /* Slightly change opacity on hover */
+}
+
+.dev-will{
+  top: 20px; /* Adjust top positioning to move it down */
+  left: 30px; /* Adjust left positioning to move it to the side */
+  position: relative;
+  font-size: 22px;
+}
+
+.hamburger-menu {
+  position: relative;
+  top: -1px; /* Adjust top positioning */
+  right: -1300px; /* Adjust right positioning */
+  font-size: 35px; /* Adjust font size for the hamburger icon */
+  color: aquamarine; /* Icon color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 1000; /* Ensure it's on top of other content */
+}
+
+
+/* Hide the close icon by default */
+.hamburger-menu .fa-times {
+  display: none;
+}
+
+
+.hamburger-menu .close {
+  color: aquamarine;
+}
+
+.nav-menu {
+position: fixed;
+display: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1.4); /* Slightly lighter black background */
+  color: white;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+ text-align: center;
+}
+
+
+.nav-menu li {
+  margin: 50px 0;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 44px;
+}
+
+/* Hover effect for menu items */
+.nav-menu li a:hover {
+  color: #7FFFD4; /* Aquamarine color */
+}
+
+/* Active state styling (optional: if using JavaScript to toggle this class) */
+.nav-menu li a.active {
+  border: 2px solid #7FFFD4; /* Aquamarine border when active */
+  color: #7FFFD4; /* Aquamarine text color when active */
+  border-radius: 4px; /* Slightly rounded corners */
+}
+
+.nav-menu.active {
+ left: 0;
+}
+
+
+/* Transform the hamburger icon to X icon when active */
+.hamburger-menu.active .fa-bars::before {
+  content: '\f00d'; /* Unicode for the 'X' icon */
+  color: aquamarine;
+}
+
+/* Fix the border size exactly around the icon */
+.hamburger-menu .fa-bars, .hamburger-menu .fa-times {
+  padding: 5px; /* Adjust to fit the icon size */
+  border: 2px solid transparent; /* Add border */
+  transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+.hamburger-menu:hover .fa-bars,
+.hamburger-menu:hover .fa-times {
+  border-color: #D8BFD8; /* Light purple border */
+  border-radius: 0; /* No border-radius */
+  padding: 5px 10px; /* Extend the padding to make the border longer */
+}
+
+
+
+
+
+
+
+
+
